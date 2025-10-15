@@ -45,7 +45,6 @@ const Navbar = () => {
                         </div>
 
                         <Link to="about" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>About</Link>
-                        <Link to="menu" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Menu</Link>
                         <Link to="review" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Reviews</Link>
 
                         <Button title="Login"/>
@@ -62,8 +61,7 @@ const Navbar = () => {
                     <Link to="home" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Home</Link>
                     <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Dishes</Link>
                     <Link to="about" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>About</Link>
-                <Link to="menu" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Menu</Link>
-                <Link to="review" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Reviews</Link>
+                    <Link to="review" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Reviews</Link>
 
                 <Button title="Login" />
 

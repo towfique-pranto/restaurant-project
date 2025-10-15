@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home.jsx";
 import Dishes from "./components/Dishes.jsx";
 import About from "./components/About.jsx";
-import Menu from "./components/Menu.jsx";
 import Review from "./components/Review.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -21,9 +20,6 @@ const App = () => {
                 </div>
                 <div id='about'>
                     <About/>
-                </div>
-                <div id="menu">
-                    <Menu/>
                 </div>
                 <div id="review">
                     <Review/>
