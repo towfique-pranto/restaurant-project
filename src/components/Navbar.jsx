@@ -30,13 +30,13 @@ const Navbar = () => {
                             </div>
                             <ul className="absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 shadow-md rounded-lg p-5">
                                 <li>
-                                    <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Desi</Link>
+                                    <Link to="desi" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Desi</Link>
                                 </li>
                                 <li>
-                                    <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Vegetarian</Link>
+                                    <Link to="vegetarian" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Vegetarian</Link>
                                     </li>
                                 <li>
-                                    <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Fastfood</Link>
+                                    <Link to="fastfood" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Fastfood</Link>
                                 </li>
                             </ul>
                         </div>
