@@ -33,13 +33,10 @@ const Navbar = () => {
                                     <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Desi</Link>
                                 </li>
                                 <li>
-                                    <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Organic</Link>
+                                    <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Vegetarian</Link>
                                     </li>
                                 <li>
-                                    <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Processed</Link>
-                                    </li>
-                                <li>
-                                    <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>FastFood</Link>
+                                    <Link to="dishes" spy={true} smooth={true} duration={500} className='hover:text-orange-500 transition-all cursor-pointer'>Fastfood</Link>
                                 </li>
                             </ul>
                         </div>
