@@ -1,8 +1,8 @@
 import React from 'react'
 import DishCard from "../layout/DishCard.jsx";
-import img1 from "../assets/img/menu3.jpg"
-import img2 from "../assets/img/menu3.jpg"
-import img3 from "../assets/img/menu3.jpg"
+import img1 from "../assets/img/menu1.jpg"
+import img2 from "../assets/img/menu1.jpg"
+import img3 from "../assets/img/menu1.jpg"
 
 const Menu = () => {
     return (
