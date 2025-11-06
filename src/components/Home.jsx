@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
 import Button from "../layout/Button.jsx";
+import { scroller } from 'react-scroll';
 
 const Home = () => {
+    const handleOrderNow = () => {
+        scroller.scrollTo('dishes', {
+            smooth: true,
+            duration: 500,
+        });
+    };
+
     return (
         <div
             className="min-h-screen flex flex-row justify-center items-center text-center lg:px-32 px-5 bg-[url('./assets/img/photob.jpg')] bg-cover bg-no-repeat">
@@ -12,10 +20,10 @@ const Home = () => {
                     fugiat magnam modi rem saepe soluta voluptatum!
                 </p>
                 <div className="text-center">
-                    <Button title="Order Now!"/>
+                    <Button title="Order Now!" onClick={handleOrderNow}/>
                 </div>
             </div>
         </div>
     )
 }
-export default Home
+export default Home;
