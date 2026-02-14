@@ -3,7 +3,7 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import Button from "./Button.jsx";
 import { useNavigate } from 'react-router-dom';
 
-const DishCard = ({ img, title, price, onAddToCart, user }) => {
+const DishCard = ({ img, title, description, price, onAddToCart, user }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -19,6 +19,7 @@ const DishCard = ({ img, title, price, onAddToCart, user }) => {
             <img className="rounded-xl" src={img} alt={title}/>
             <div className="space-y-4">
                 <h3 className="font-semibold text-center text-xl pt-6">{title}</h3>
+                <p className="text-sm text-gray-500 text-center">{description}</p>
                 <div className="flex flex-row justify-center">
                     <BsStarFill className="text-orange-500"/>
                     <BsStarFill className="text-orange-500"/>
