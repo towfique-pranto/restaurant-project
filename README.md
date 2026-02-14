@@ -4,6 +4,7 @@ This is a frontend course project built for the UIU CDIP training:
 https://cdip.uiu.ac.bd/training-courses/frontend-mastery-javascript-react-next-js-typescript-vue-angular/
 
 [Live Demo] (https://menujs-restaurant.netlify.app/)
+Login: Admin Password: 1234
 
 ## Project Goal
 The goal of this project is to practice core frontend engineering skills:
