@@ -5,9 +5,11 @@ import { IoRestaurantOutline } from "react-icons/io5";
 import Button from '../layout/Button';
 import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
+import { useCart } from "../hooks/useCart.js";
 
 const Navbar = ({ user, onLogout }) => {
     const [menu, setMenu] = useState(false);
+    const { cartCount } = useCart();
     const handleChange = () => setMenu(!menu);
 
     return (
@@ -50,7 +52,14 @@ const Navbar = ({ user, onLogout }) => {
                         {user ? (
                             <>
                                 <RouterLink to="/cart">
-                                    <Button title="Cart"/>
+                                    <div className="relative inline-block">
+                                        <Button title="Cart"/>
+                                        {cartCount > 0 && (
+                                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 rounded-full">
+                                                {cartCount}
+                                            </span>
+                                        )}
+                                    </div>
                                 </RouterLink>
                                 <button onClick={onLogout} className="bg-red-500 text-white px-3 py-1 rounded">Logout</button>
                             </>
@@ -82,7 +91,14 @@ const Navbar = ({ user, onLogout }) => {
                     {user ? (
                         <>
                             <RouterLink to="/cart">
-                                <Button title="Cart"/>
+                                <div className="relative inline-block">
+                                    <Button title="Cart"/>
+                                    {cartCount > 0 && (
+                                        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 rounded-full">
+                                            {cartCount}
+                                        </span>
+                                    )}
+                                </div>
                             </RouterLink>
                             <button onClick={onLogout} className="bg-red-500 text-white px-3 py-1 rounded">Logout</button>
                         </>

@@ -1,19 +1,17 @@
-import React from "react";
-import { useCart } from "./CartContext.jsx";
+import React, { useState } from "react";
+import { useCart } from "../hooks/useCart.js";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-    const { cart, removeFromCart, clearCart } = useCart();
+    const { cart, addToCart, removeFromCart, clearCart, cartTotal } = useCart();
     const navigate = useNavigate();
-
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const [status, setStatus] = useState("");
 
     const handleCheckout = () => {
         if (cart.length === 0) {
-            alert("Your cart is empty!");
+            setStatus("Your cart is empty.");
             return;
         }
-        alert("Thank you! Your order has been placed.");
         clearCart();
         navigate("/"); // go back to landing page after checkout
     };
@@ -29,17 +27,28 @@ const Cart = () => {
                     <>
                         {cart.map(item => (
                             <div key={item.id} className="flex justify-between border-b py-2">
-                                <span>{item.title}</span>
-                                <span>৳{item.price}</span>
-                                <button
-                                    onClick={() => removeFromCart(item.id)}
-                                    className="bg-red-500 text-white px-2 py-1 rounded"
-                                >
-                                    Remove
-                                </button>
+                                <div className="flex flex-col">
+                                    <span>{item.title}</span>
+                                    <span>৳{item.price} each</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <button
+                                        onClick={() => removeFromCart(item.id)}
+                                        className="bg-red-500 text-white px-2 py-1 rounded"
+                                    >
+                                        -
+                                    </button>
+                                    <span>{item.quantity}</span>
+                                    <button
+                                        onClick={() => addToCart(item)}
+                                        className="bg-green-500 text-white px-2 py-1 rounded"
+                                    >
+                                        +
+                                    </button>
+                                </div>
                             </div>
                         ))}
-                        <h3 className="text-xl mt-4 text-right">Total: ৳{total}</h3>
+                        <h3 className="text-xl mt-4 text-right">Total: ৳{cartTotal}</h3>
                         <button
                             onClick={handleCheckout}
                             className="mt-4 bg-green-500 text-white w-full p-2 rounded hover:bg-green-600 transition"
@@ -55,6 +64,7 @@ const Cart = () => {
                 >
                     Back
                 </button>
+                {status && <p className="text-center mt-4 text-sm text-gray-600">{status}</p>}
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 // Dishes.jsx
 import React from 'react';
 import DishCard from "../layout/DishCard.jsx";
-import { useCart } from "./CartContext.jsx";
+import { useCart } from "../hooks/useCart.js";
 import img1 from "../assets/img/img1.png";
 import img2 from "../assets/img/img2.png";
 import img3 from "../assets/img/img3.png";

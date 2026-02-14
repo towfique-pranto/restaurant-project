@@ -8,7 +8,6 @@ const DishCard = ({ img, title, price, onAddToCart, user }) => {
 
     const handleClick = () => {
         if (!user) {
-            alert("Please log in to order!");
             navigate("/login"); // redirect to login page
             return;
         }

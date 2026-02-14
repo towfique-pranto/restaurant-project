@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home.jsx";
 import Dishes from "./components/Dishes.jsx";
@@ -41,7 +41,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Landing user={user} />} />
                     <Route path="/login" element={<Login onLogin={handleLogin} />} />
-                    <Route path="/cart" element={<Cart user={user} />} />
+                    <Route
+                        path="/cart"
+                        element={user ? <Cart /> : <Navigate to="/login" replace />}
+                    />
                 </Routes>
             </main>
 
