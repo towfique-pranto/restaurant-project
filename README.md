@@ -4,16 +4,14 @@ Independent frontend project developed for [UIU CDIP Frontend Mastery course](ht
 
 
 
-[Live Demo] (https://menujs-restaurant.netlify.app/)
-Login: Admin Password: 1234
+[Live Demo Link](https://menujs-restaurant.netlify.app/) | Login: Admin | Password: 1234
+
+
+<img width="1660" height="723" alt="image" src="https://github.com/user-attachments/assets/21000bd4-22fb-4bb0-a5f0-b2f2354f17aa" />
+
 
 ## Project Goal
-The goal of this project is to practice core frontend engineering skills:
-- component-based UI development with React
-- client-side routing and page flow
-- shared state management with Context API
-- responsive layout and styling with Tailwind CSS
-- basic code quality checks with ESLint
+The goal of this project is to practice and demonstrate core frontend engineering skills
 
 ## What I Implemented
 - Single-page restaurant layout with sections: Home, Dishes, About, Reviews
@@ -28,12 +26,12 @@ The goal of this project is to practice core frontend engineering skills:
   - calculate total item count and total price
 
 ## Tech Stack
-- React 19
-- Vite 7
-- Tailwind CSS 4
+- React
+- Vit
+- Tailwind CSS
 - React Router DOM
 - React Scroll
-- ESLint 9
+- ESLint 
 
 ## Project Structure
 - `src/components`: feature and page-level components
